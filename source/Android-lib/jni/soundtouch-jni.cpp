@@ -41,7 +41,7 @@ static void _setErrmsg(const char *msg)
 	_errMsg = msg;
 }
 
-#if 0   // apparently following workaround not needed any more with concurrent Android SDKs
+#if 1   // apparently following workaround not needed any more with concurrent Android SDKs
 #ifdef _OPENMP
 
 #include <pthread.h>
