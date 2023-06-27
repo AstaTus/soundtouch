@@ -340,6 +340,15 @@ SOUNDTOUCHDLL_API uint __cdecl soundtouch_numUnprocessedSamples(HANDLE h)
     return sth->pst->numUnprocessedSamples();
 }
 
+SOUNDTOUCHDLL_API double __cdecl soundtouch_getInputOutputSampleRatio(HANDLE h)
+{
+    STHANDLE* sth = (STHANDLE*)h;
+    if (sth->dwMagic != STMAGIC) return 0.0f;
+
+    return sth->pst->getInputOutputSampleRatio();
+}
+
+
 
 /// Adjusts book-keeping so that given number of samples are removed from beginning of the 
 /// sample buffer without copying them anywhere. 

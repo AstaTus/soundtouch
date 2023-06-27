@@ -171,6 +171,9 @@ SOUNDTOUCHDLL_API int __cdecl soundtouch_getSetting(HANDLE h,
 /// Returns number of samples currently unprocessed.
 SOUNDTOUCHDLL_API unsigned int __cdecl soundtouch_numUnprocessedSamples(HANDLE h);
 
+/// Returns ratio of input and out sample.
+SOUNDTOUCHDLL_API double __cdecl soundtouch_getInputOutputSampleRatio(HANDLE h);
+
 /// Adjusts book-keeping so that given number of samples are removed from beginning of the 
 /// sample buffer without copying them anywhere. 
 ///
